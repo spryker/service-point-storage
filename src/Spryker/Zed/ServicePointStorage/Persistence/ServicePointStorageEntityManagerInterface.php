@@ -24,7 +24,7 @@ interface ServicePointStorageEntityManagerInterface
     ): void;
 
     /**
-     * @param list<int> $servicePointIds
+     * @param array<int> $servicePointIds
      * @param string|null $storeName
      *
      * @return void
@@ -39,7 +39,7 @@ interface ServicePointStorageEntityManagerInterface
     public function saveServiceTypeStorage(ServiceTypeStorageTransfer $serviceTypeStorageTransfer): void;
 
     /**
-     * @param list<int> $serviceTypeIds
+     * @param array<int> $serviceTypeIds
      *
      * @return void
      */

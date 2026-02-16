@@ -37,7 +37,7 @@ class ServiceTypePublisherTriggerPlugin extends AbstractPlugin implements Publis
      * @param int $offset
      * @param int $limit
      *
-     * @return list<\Generated\Shared\Transfer\ServiceTypeTransfer>
+     * @return array<\Generated\Shared\Transfer\ServiceTypeTransfer>
      */
     public function getData(int $offset, int $limit): array
     {

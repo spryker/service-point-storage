@@ -17,7 +17,7 @@ interface ServicePointStorageFacadeInterface
      *
      * @api
      *
-     * @param list<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
+     * @param array<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
      *
      * @return void
      */
@@ -31,7 +31,7 @@ interface ServicePointStorageFacadeInterface
      *
      * @api
      *
-     * @param list<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
+     * @param array<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
      *
      * @return void
      */
@@ -45,7 +45,7 @@ interface ServicePointStorageFacadeInterface
      *
      * @api
      *
-     * @param list<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
+     * @param array<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
      *
      * @return void
      */
@@ -59,7 +59,7 @@ interface ServicePointStorageFacadeInterface
      *
      * @api
      *
-     * @param list<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
+     * @param array<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
      *
      * @return void
      */
@@ -73,7 +73,7 @@ interface ServicePointStorageFacadeInterface
      *
      * @api
      *
-     * @param list<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
+     * @param array<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
      *
      * @return void
      */
@@ -87,9 +87,9 @@ interface ServicePointStorageFacadeInterface
      *
      * @param int $offset
      * @param int $limit
-     * @param list<int> $servicePointIds
+     * @param array<int> $servicePointIds
      *
-     * @return list<\Generated\Shared\Transfer\SynchronizationDataTransfer>
+     * @return array<\Generated\Shared\Transfer\SynchronizationDataTransfer>
      */
     public function getServicePointStorageSynchronizationDataTransfers(int $offset, int $limit, array $servicePointIds = []): array;
 
@@ -101,9 +101,9 @@ interface ServicePointStorageFacadeInterface
      *
      * @param int $offset
      * @param int $limit
-     * @param list<int> $serviceTypeIds
+     * @param array<int> $serviceTypeIds
      *
-     * @return list<\Generated\Shared\Transfer\SynchronizationDataTransfer>
+     * @return array<\Generated\Shared\Transfer\SynchronizationDataTransfer>
      */
     public function getServiceTypeStorageSynchronizationDataTransfers(int $offset, int $limit, array $serviceTypeIds = []): array;
 }

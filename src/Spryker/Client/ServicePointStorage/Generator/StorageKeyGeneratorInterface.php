@@ -10,11 +10,11 @@ namespace Spryker\Client\ServicePointStorage\Generator;
 interface StorageKeyGeneratorInterface
 {
     /**
-     * @param list<int> $resourceIds
+     * @param array<int> $resourceIds
      * @param string $resourceName
      * @param string|null $storeName
      *
-     * @return list<string>
+     * @return array<string>
      */
     public function generateIdKeys(
         array $resourceIds,
@@ -23,11 +23,11 @@ interface StorageKeyGeneratorInterface
     ): array;
 
     /**
-     * @param list<string> $uuids
+     * @param array<string> $uuids
      * @param string $resourceName
      * @param string|null $storeName
      *
-     * @return list<string>
+     * @return array<string>
      */
     public function generateUuidKeys(
         array $uuids,

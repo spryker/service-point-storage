@@ -10,28 +10,28 @@ namespace Spryker\Zed\ServicePointStorage\Business\Writer;
 interface ServicePointStorageWriterInterface
 {
     /**
-     * @param list<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
+     * @param array<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
      *
      * @return void
      */
     public function writeServicePointStorageCollectionByServicePointEvents(array $eventEntityTransfers): void;
 
     /**
-     * @param list<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
+     * @param array<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
      *
      * @return void
      */
     public function writeServicePointStorageCollectionByServicePointAddressEvents(array $eventEntityTransfers): void;
 
     /**
-     * @param list<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
+     * @param array<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
      *
      * @return void
      */
     public function writeServicePointStorageCollectionByServicePointStoreEvents(array $eventEntityTransfers): void;
 
     /**
-     * @param list<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
+     * @param array<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
      *
      * @return void
      */

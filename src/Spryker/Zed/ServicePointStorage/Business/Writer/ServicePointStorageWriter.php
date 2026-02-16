@@ -89,7 +89,7 @@ class ServicePointStorageWriter implements ServicePointStorageWriterInterface
     }
 
     /**
-     * @param list<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
+     * @param array<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class ServicePointStorageWriter implements ServicePointStorageWriterInterface
     }
 
     /**
-     * @param list<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
+     * @param array<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
      *
      * @return void
      */
@@ -116,7 +116,7 @@ class ServicePointStorageWriter implements ServicePointStorageWriterInterface
     }
 
     /**
-     * @param list<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
+     * @param array<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
      *
      * @return void
      */
@@ -131,7 +131,7 @@ class ServicePointStorageWriter implements ServicePointStorageWriterInterface
     }
 
     /**
-     * @param list<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
+     * @param array<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
      *
      * @return void
      */
@@ -146,13 +146,13 @@ class ServicePointStorageWriter implements ServicePointStorageWriterInterface
     }
 
     /**
-     * @param list<int> $servicePointIds
+     * @param array<int> $servicePointIds
      *
      * @return void
      */
     protected function writeServicePointStorageCollection(array $servicePointIds): void
     {
-        /** @var list<int> $servicePointIds */
+        /** @var array<int> $servicePointIds */
         $servicePointIds = array_filter($servicePointIds);
         if (!$servicePointIds) {
             return;
@@ -181,7 +181,7 @@ class ServicePointStorageWriter implements ServicePointStorageWriterInterface
 
     /**
      * @param \Generated\Shared\Transfer\ServicePointTransfer $servicePointTransfer
-     * @param list<\Generated\Shared\Transfer\StoreTransfer> $storeTransfers
+     * @param array<\Generated\Shared\Transfer\StoreTransfer> $storeTransfers
      *
      * @return void
      */

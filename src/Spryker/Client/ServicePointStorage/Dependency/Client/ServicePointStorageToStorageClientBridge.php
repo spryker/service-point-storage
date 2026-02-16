@@ -23,9 +23,9 @@ class ServicePointStorageToStorageClientBridge implements ServicePointStorageToS
     }
 
     /**
-     * @param list<string> $keys
+     * @param array<string> $keys
      *
-     * @return list<string>
+     * @return array<string>
      */
     public function getMulti(array $keys): array
     {

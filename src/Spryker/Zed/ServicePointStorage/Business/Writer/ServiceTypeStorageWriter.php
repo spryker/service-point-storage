@@ -57,7 +57,7 @@ class ServiceTypeStorageWriter implements ServiceTypeStorageWriterInterface
     }
 
     /**
-     * @param list<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
+     * @param array<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
      *
      * @return void
      */
@@ -98,7 +98,7 @@ class ServiceTypeStorageWriter implements ServiceTypeStorageWriterInterface
     }
 
     /**
-     * @param list<int> $serviceTypeIds
+     * @param array<int> $serviceTypeIds
      *
      * @return \Generated\Shared\Transfer\ServiceTypeCollectionTransfer
      */

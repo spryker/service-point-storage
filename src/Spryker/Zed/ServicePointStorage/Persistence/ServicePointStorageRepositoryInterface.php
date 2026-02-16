@@ -12,18 +12,18 @@ interface ServicePointStorageRepositoryInterface
     /**
      * @param int $offset
      * @param int $limit
-     * @param list<int> $servicePointIds
+     * @param array<int> $servicePointIds
      *
-     * @return list<\Generated\Shared\Transfer\SynchronizationDataTransfer>
+     * @return array<\Generated\Shared\Transfer\SynchronizationDataTransfer>
      */
     public function getServicePointStorageSynchronizationDataTransfers(int $offset, int $limit, array $servicePointIds = []): array;
 
     /**
      * @param int $offset
      * @param int $limit
-     * @param list<int> $serviceTypeIds
+     * @param array<int> $serviceTypeIds
      *
-     * @return list<\Generated\Shared\Transfer\SynchronizationDataTransfer>
+     * @return array<\Generated\Shared\Transfer\SynchronizationDataTransfer>
      */
     public function getServiceTypeStorageSynchronizationDataTransfers(int $offset, int $limit, array $serviceTypeIds = []): array;
 }

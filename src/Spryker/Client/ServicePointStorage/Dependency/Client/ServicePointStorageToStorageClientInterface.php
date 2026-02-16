@@ -10,9 +10,9 @@ namespace Spryker\Client\ServicePointStorage\Dependency\Client;
 interface ServicePointStorageToStorageClientInterface
 {
     /**
-     * @param list<string> $keys
+     * @param array<string> $keys
      *
-     * @return list<string>
+     * @return array<string>
      */
     public function getMulti(array $keys): array;
 }
