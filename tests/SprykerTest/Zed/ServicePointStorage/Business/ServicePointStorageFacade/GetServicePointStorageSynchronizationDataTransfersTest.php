@@ -49,9 +49,6 @@ class GetServicePointStorageSynchronizationDataTransfersTest extends Unit
      */
     protected ServicePointStorageBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -96,9 +93,6 @@ class GetServicePointStorageSynchronizationDataTransfersTest extends Unit
         $this->assertSame($expectedServicePointIds, $resultServicePointIds);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnCorrectListWhenCorrectLimitIsProvided(): void
     {
         // Arrange
@@ -123,9 +117,6 @@ class GetServicePointStorageSynchronizationDataTransfersTest extends Unit
         $this->assertSame([$expectedServicePointIds[0]], $resultServicePointIds);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnCorrectListWhenCorrectOffsetIsProvided(): void
     {
         // Arrange
@@ -150,9 +141,6 @@ class GetServicePointStorageSynchronizationDataTransfersTest extends Unit
         $this->assertSame([$expectedServicePointIds[1]], $resultServicePointIds);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnCorrectList(): void
     {
         // Arrange

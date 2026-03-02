@@ -35,9 +35,6 @@ class WriteServiceTypeStorageCollectionByServiceTypeEventsTest extends Unit
      */
     protected ServicePointStorageBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -45,9 +42,6 @@ class WriteServiceTypeStorageCollectionByServiceTypeEventsTest extends Unit
         $this->tester->ensureServiceTypeStorageDatabaseTableIsEmpty();
     }
 
-    /**
-     * @return void
-     */
     public function testShouldNotWriteWhenServiceTypeIdsAreNotProvided(): void
     {
         // Arrange
@@ -61,9 +55,6 @@ class WriteServiceTypeStorageCollectionByServiceTypeEventsTest extends Unit
         $this->assertCount(0, $serviceTypeStorageEntities);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldNotWriteWhenNotExistingServiceTypeIdIsProvided(): void
     {
         // Arrange
@@ -78,9 +69,6 @@ class WriteServiceTypeStorageCollectionByServiceTypeEventsTest extends Unit
         $this->assertCount(0, $serviceTypeStorageEntities);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldUpdateServiceTypeStorageEntities(): void
     {
         // Arrange
@@ -98,9 +86,6 @@ class WriteServiceTypeStorageCollectionByServiceTypeEventsTest extends Unit
         $this->assertEquals($serviceTypeTransfer->toArray(), $serviceTypeStorageEntities[0]->getData());
     }
 
-    /**
-     * @return void
-     */
     public function testShouldCreateServiceTypeStorageEntities(): void
     {
         // Arrange
@@ -117,9 +102,6 @@ class WriteServiceTypeStorageCollectionByServiceTypeEventsTest extends Unit
         $this->assertSame($serviceTypeTransfer->getIdServiceTypeOrFail(), $serviceTypeStorageEntities[0]->getFkServiceType());
     }
 
-    /**
-     * @return void
-     */
     public function testShouldRemoveServiceTypeStorageEntitiesWhenServiceTypesWithIdsDoNotExist(): void
     {
         // Arrange

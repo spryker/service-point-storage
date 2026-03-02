@@ -14,12 +14,6 @@ use Orm\Zed\ServicePointStorage\Persistence\SpyServiceTypeStorage;
 
 class ServicePointStorageMapper
 {
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointStorageTransfer $servicePointStorageTransfer
-     * @param \Orm\Zed\ServicePointStorage\Persistence\SpyServicePointStorage $servicePointStorageEntity
-     *
-     * @return \Orm\Zed\ServicePointStorage\Persistence\SpyServicePointStorage
-     */
     public function mapServicePointStorageTransferToServicePointStorageEntity(
         ServicePointStorageTransfer $servicePointStorageTransfer,
         SpyServicePointStorage $servicePointStorageEntity
@@ -27,12 +21,6 @@ class ServicePointStorageMapper
         return $servicePointStorageEntity->setData($servicePointStorageTransfer->toArray());
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeStorageTransfer $serviceTypeStorageTransfer
-     * @param \Orm\Zed\ServicePointStorage\Persistence\SpyServiceTypeStorage $serviceTypeStorageEntity
-     *
-     * @return \Orm\Zed\ServicePointStorage\Persistence\SpyServiceTypeStorage
-     */
     public function mapServiceTypeStorageTransferToServiceTypeStorageEntity(
         ServiceTypeStorageTransfer $serviceTypeStorageTransfer,
         SpyServiceTypeStorage $serviceTypeStorageEntity

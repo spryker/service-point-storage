@@ -22,9 +22,6 @@ use Spryker\Client\ServicePointStorage\Reader\ServiceTypeStorageReaderInterface;
 
 class ServicePointStorageFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Client\ServicePointStorage\Reader\ServicePointStorageReaderInterface
-     */
     public function createServicePointStorageReader(): ServicePointStorageReaderInterface
     {
         return new ServicePointStorageReader(
@@ -35,9 +32,6 @@ class ServicePointStorageFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Client\ServicePointStorage\Reader\ServiceTypeStorageReaderInterface
-     */
     public function createServiceTypeStorageReader(): ServiceTypeStorageReaderInterface
     {
         return new ServiceTypeStorageReader(
@@ -48,9 +42,6 @@ class ServicePointStorageFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Client\ServicePointStorage\Generator\StorageKeyGeneratorInterface
-     */
     public function createStorageKeyGenerator(): StorageKeyGeneratorInterface
     {
         return new StorageKeyGenerator(
@@ -58,33 +49,21 @@ class ServicePointStorageFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Client\ServicePointStorage\Mapper\ServicePointStorageMapperInterface
-     */
     public function createServicePointStorageMapper(): ServicePointStorageMapperInterface
     {
         return new ServicePointStorageMapper();
     }
 
-    /**
-     * @return \Spryker\Client\ServicePointStorage\Dependency\Client\ServicePointStorageToStorageClientInterface
-     */
     public function getStorageClient(): ServicePointStorageToStorageClientInterface
     {
         return $this->getProvidedDependency(ServicePointStorageDependencyProvider::CLIENT_STORAGE);
     }
 
-    /**
-     * @return \Spryker\Client\ServicePointStorage\Dependency\Service\ServicePointStorageToSynchronizationServiceInterface
-     */
     public function getSynchronizationService(): ServicePointStorageToSynchronizationServiceInterface
     {
         return $this->getProvidedDependency(ServicePointStorageDependencyProvider::SERVICE_SYNCHRONIZATION);
     }
 
-    /**
-     * @return \Spryker\Client\ServicePointStorage\Dependency\Service\ServicePointStorageToUtilEncodingServiceInterface
-     */
     public function getUtilEncodingService(): ServicePointStorageToUtilEncodingServiceInterface
     {
         return $this->getProvidedDependency(ServicePointStorageDependencyProvider::SERVICE_UTIL_ENCODING);

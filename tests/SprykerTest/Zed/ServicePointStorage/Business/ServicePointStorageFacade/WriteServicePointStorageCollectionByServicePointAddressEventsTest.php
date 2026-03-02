@@ -74,9 +74,6 @@ class WriteServicePointStorageCollectionByServicePointAddressEventsTest extends 
      */
     protected ServicePointStorageBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function testShouldAddAddress(): void
     {
         // Arrange
@@ -104,9 +101,6 @@ class WriteServicePointStorageCollectionByServicePointAddressEventsTest extends 
         $this->assertSame($servicePointAddressTransfer->getRegion()->getUuid(), $servicePointEntityData[static::KEY_ADDRESS][static::KEY_REGION][static::KEY_UUID]);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldUpdateAddress(): void
     {
         // Arrange

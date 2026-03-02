@@ -63,9 +63,6 @@ class GetServicePointStorageCollectionTest extends Unit
      */
     protected ServicePointStorageClientTester $tester;
 
-    /**
-     * @return void
-     */
     public function testShouldThrowAnExceptionWhenNoConditionsProvided(): void
     {
         // Assert
@@ -75,9 +72,6 @@ class GetServicePointStorageCollectionTest extends Unit
         $this->tester->getClient()->getServicePointStorageCollection(new ServicePointStorageCriteriaTransfer());
     }
 
-    /**
-     * @return void
-     */
     public function testShouldThrowAnExceptionWhenConditionWithServicePointIdsDoesNotHaveStore(): void
     {
         // Arrange
@@ -92,9 +86,6 @@ class GetServicePointStorageCollectionTest extends Unit
         $this->tester->getClient()->getServicePointStorageCollection($servicePointStorageCriteriaTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldThrowAnExceptionWhenConditionWithUuidsDoesNotHaveStore(): void
     {
         // Arrange
@@ -109,9 +100,6 @@ class GetServicePointStorageCollectionTest extends Unit
         $this->tester->getClient()->getServicePointStorageCollection($servicePointStorageCriteriaTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnEmptyCollectionWhenConditionsAreNotProvided(): void
     {
         // Arrange
@@ -127,9 +115,6 @@ class GetServicePointStorageCollectionTest extends Unit
         $this->assertCount(0, $servicePointStorageCollectionTransfer->getServicePointStorages());
     }
 
-    /**
-     * @return void
-     */
     public function testShouldFilterByServicePointIdsWhenConditionIsProvided(): void
     {
         // Arrange
@@ -157,9 +142,6 @@ class GetServicePointStorageCollectionTest extends Unit
         $this->tester->getClient()->getServicePointStorageCollection($servicePointStorageCriteriaTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldFilterByUuidsMappingWhenConditionIsProvided(): void
     {
         // Arrange
@@ -187,9 +169,6 @@ class GetServicePointStorageCollectionTest extends Unit
         $this->tester->getClient()->getServicePointStorageCollection($servicePointStorageCriteriaTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnEmptyCollectionWhenNoDataByServicePointIdsIsFound(): void
     {
         // Arrange
@@ -211,9 +190,6 @@ class GetServicePointStorageCollectionTest extends Unit
         $this->assertCount(0, $servicePointStorageCollectionTransfer->getServicePointStorages());
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnCollectionWhenFilterByServicePointIds(): void
     {
         // Arrange
@@ -246,9 +222,6 @@ class GetServicePointStorageCollectionTest extends Unit
         $this->assertSame(static::TEST_ID_SERVICE_POINT, $servicePointStorageTransfer->getIdServicePoint());
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnEmptyCollectionWhenNoDataByUuidsIsFound(): void
     {
         // Arrange
@@ -279,9 +252,6 @@ class GetServicePointStorageCollectionTest extends Unit
         $this->assertCount(0, $servicePointStorageCollectionTransfer->getServicePointStorages());
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnCollectionWhenFilterByUuids(): void
     {
         // Arrange

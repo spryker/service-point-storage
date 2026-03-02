@@ -48,9 +48,6 @@ class WriteServicePointStorageCollectionByServicePointStoreEventsTest extends Un
      */
     protected ServicePointStorageBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function testShouldAddStoreRelation(): void
     {
         // Arrange
@@ -79,9 +76,6 @@ class WriteServicePointStorageCollectionByServicePointStoreEventsTest extends Un
         $this->assertSame(static::STORE_NAME_DE, $servicePointStorageEntities[1]->getStore());
     }
 
-    /**
-     * @return void
-     */
     public function testShouldRemoveStoreRelation(): void
     {
         // Arrange

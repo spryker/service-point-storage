@@ -14,23 +14,11 @@ use Generated\Shared\Transfer\ServiceTypeTransfer;
 
 interface ServicePointStorageMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointTransfer $servicePointTransfer
-     * @param \Generated\Shared\Transfer\ServicePointStorageTransfer $servicePointStorageTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServicePointStorageTransfer
-     */
     public function mapServicePointTransferToServicePointStorageTransfer(
         ServicePointTransfer $servicePointTransfer,
         ServicePointStorageTransfer $servicePointStorageTransfer
     ): ServicePointStorageTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeTransfer $serviceTypeTransfer
-     * @param \Generated\Shared\Transfer\ServiceTypeStorageTransfer $serviceTypeStorageTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServiceTypeStorageTransfer
-     */
     public function mapServiceTypeTransferToServiceTypeStorageTransfer(
         ServiceTypeTransfer $serviceTypeTransfer,
         ServiceTypeStorageTransfer $serviceTypeStorageTransfer

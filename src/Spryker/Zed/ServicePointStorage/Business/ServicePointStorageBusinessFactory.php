@@ -26,9 +26,6 @@ use Spryker\Zed\ServicePointStorage\ServicePointStorageDependencyProvider;
  */
 class ServicePointStorageBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\ServicePointStorage\Business\Writer\ServicePointStorageWriterInterface
-     */
     public function createServicePointStorageWriter(): ServicePointStorageWriterInterface
     {
         return new ServicePointStorageWriter(
@@ -40,9 +37,6 @@ class ServicePointStorageBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ServicePointStorage\Business\Writer\ServiceTypeStorageWriterInterface
-     */
     public function createServiceTypeStorageWriter(): ServiceTypeStorageWriterInterface
     {
         return new ServiceTypeStorageWriter(
@@ -53,33 +47,21 @@ class ServicePointStorageBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ServicePointStorage\Business\Mapper\ServicePointStorageMapperInterface
-     */
     public function createServicePointStorageMapper(): ServicePointStorageMapperInterface
     {
         return new ServicePointStorageMapper();
     }
 
-    /**
-     * @return \Spryker\Zed\ServicePointStorage\Dependency\Facade\ServicePointStorageToEventBehaviorFacadeInterface
-     */
     public function getEventBehaviorFacade(): ServicePointStorageToEventBehaviorFacadeInterface
     {
         return $this->getProvidedDependency(ServicePointStorageDependencyProvider::FACADE_EVENT_BEHAVIOR);
     }
 
-    /**
-     * @return \Spryker\Zed\ServicePointStorage\Dependency\Facade\ServicePointStorageToServicePointFacadeInterface
-     */
     public function getServicePointFacade(): ServicePointStorageToServicePointFacadeInterface
     {
         return $this->getProvidedDependency(ServicePointStorageDependencyProvider::FACADE_SERVICE_POINT);
     }
 
-    /**
-     * @return \Spryker\Zed\ServicePointStorage\Dependency\Facade\ServicePointStorageToStoreFacadeInterface
-     */
     public function getStoreFacade(): ServicePointStorageToStoreFacadeInterface
     {
         return $this->getProvidedDependency(ServicePointStorageDependencyProvider::FACADE_STORE);

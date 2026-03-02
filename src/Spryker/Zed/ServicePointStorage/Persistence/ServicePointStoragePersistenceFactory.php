@@ -19,25 +19,16 @@ use Spryker\Zed\ServicePointStorage\Persistence\Propel\Mapper\ServicePointStorag
  */
 class ServicePointStoragePersistenceFactory extends AbstractPersistenceFactory
 {
-    /**
-     * @return \Orm\Zed\ServicePointStorage\Persistence\SpyServicePointStorageQuery
-     */
     public function getServicePointStorageQuery(): SpyServicePointStorageQuery
     {
         return SpyServicePointStorageQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\ServicePointStorage\Persistence\SpyServiceTypeStorageQuery
-     */
     public function getServiceTypeStorageQuery(): SpyServiceTypeStorageQuery
     {
         return SpyServiceTypeStorageQuery::create();
     }
 
-    /**
-     * @return \Spryker\Zed\ServicePointStorage\Persistence\Propel\Mapper\ServicePointStorageMapper
-     */
     public function createServicePointStorageMapper(): ServicePointStorageMapper
     {
         return new ServicePointStorageMapper();

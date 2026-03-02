@@ -67,13 +67,6 @@ class ServicePointStorageWriter implements ServicePointStorageWriterInterface
      */
     protected ServicePointStorageMapperInterface $servicePointStorageMapper;
 
-    /**
-     * @param \Spryker\Zed\ServicePointStorage\Dependency\Facade\ServicePointStorageToEventBehaviorFacadeInterface $eventBehaviorFacade
-     * @param \Spryker\Zed\ServicePointStorage\Dependency\Facade\ServicePointStorageToServicePointFacadeInterface $servicePointFacade
-     * @param \Spryker\Zed\ServicePointStorage\Dependency\Facade\ServicePointStorageToStoreFacadeInterface $storeFacade
-     * @param \Spryker\Zed\ServicePointStorage\Persistence\ServicePointStorageEntityManagerInterface $servicePointStorageEntityManager
-     * @param \Spryker\Zed\ServicePointStorage\Business\Mapper\ServicePointStorageMapperInterface $servicePointStorageMapper
-     */
     public function __construct(
         ServicePointStorageToEventBehaviorFacadeInterface $eventBehaviorFacade,
         ServicePointStorageToServicePointFacadeInterface $servicePointFacade,
@@ -217,12 +210,6 @@ class ServicePointStorageWriter implements ServicePointStorageWriterInterface
         }
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointTransfer $servicePointTransfer
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     *
-     * @return bool
-     */
     protected function isServicePointAvailableInStore(ServicePointTransfer $servicePointTransfer, StoreTransfer $storeTransfer): bool
     {
         foreach ($servicePointTransfer->getStoreRelationOrFail()->getStores() as $servicePointStoreTransfer) {
@@ -234,11 +221,6 @@ class ServicePointStorageWriter implements ServicePointStorageWriterInterface
         return false;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointTransfer $servicePointTransfer
-     *
-     * @return void
-     */
     protected function filterOutInactiveServices(ServicePointTransfer $servicePointTransfer): void
     {
         $activeServiceTransfers = new ArrayObject();

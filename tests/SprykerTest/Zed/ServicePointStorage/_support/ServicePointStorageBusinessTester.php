@@ -65,11 +65,6 @@ class ServicePointStorageBusinessTester extends Actor
         return $this->haveServicePoint($servicePointTransfer->toArray());
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointTransfer $servicePointTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServicePointAddressTransfer
-     */
     public function createServicePointAddressTransfer(
         ServicePointTransfer $servicePointTransfer
     ): ServicePointAddressTransfer {
@@ -109,11 +104,6 @@ class ServicePointStorageBusinessTester extends Actor
         }
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeTransfer $serviceTypeTransfer
-     *
-     * @return void
-     */
     public function saveServiceTypeStorage(ServiceTypeTransfer $serviceTypeTransfer): void
     {
         $serviceTypeStorageEntity = $this->getServiceTypeStorageQuery()
@@ -151,49 +141,31 @@ class ServicePointStorageBusinessTester extends Actor
             ->getData();
     }
 
-    /**
-     * @return void
-     */
     public function ensureServicePointStorageDatabaseTableIsEmpty(): void
     {
         $this->ensureDatabaseTableIsEmpty($this->getServicePointStorageQuery());
     }
 
-    /**
-     * @return void
-     */
     public function ensureServiceTypeStorageDatabaseTableIsEmpty(): void
     {
         $this->ensureDatabaseTableIsEmpty($this->getServiceTypeStorageQuery());
     }
 
-    /**
-     * @return void
-     */
     public function ensureServiceTypeTableIsEmpty(): void
     {
         $this->ensureDatabaseTableIsEmpty($this->getServiceTypeQuery());
     }
 
-    /**
-     * @return \Orm\Zed\ServicePoint\Persistence\SpyServiceTypeQuery
-     */
     protected function getServiceTypeQuery(): SpyServiceTypeQuery
     {
         return SpyServiceTypeQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\ServicePointStorage\Persistence\SpyServicePointStorageQuery
-     */
     protected function getServicePointStorageQuery(): SpyServicePointStorageQuery
     {
         return SpyServicePointStorageQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\ServicePointStorage\Persistence\SpyServiceTypeStorageQuery
-     */
     protected function getServiceTypeStorageQuery(): SpyServiceTypeStorageQuery
     {
         return SpyServiceTypeStorageQuery::create();

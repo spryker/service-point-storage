@@ -44,12 +44,6 @@ class ServicePointStorageReader implements ServicePointStorageReaderInterface
      */
     protected ServicePointStorageMapperInterface $servicePointStorageMapper;
 
-    /**
-     * @param \Spryker\Client\ServicePointStorage\Dependency\Client\ServicePointStorageToStorageClientInterface $storageClient
-     * @param \Spryker\Client\ServicePointStorage\Generator\StorageKeyGeneratorInterface $storageKeyGenerator
-     * @param \Spryker\Client\ServicePointStorage\Dependency\Service\ServicePointStorageToUtilEncodingServiceInterface $utilEncodingService
-     * @param \Spryker\Client\ServicePointStorage\Mapper\ServicePointStorageMapperInterface $servicePointStorageMapper
-     */
     public function __construct(
         ServicePointStorageToStorageClientInterface $storageClient,
         StorageKeyGeneratorInterface $storageKeyGenerator,
@@ -62,11 +56,6 @@ class ServicePointStorageReader implements ServicePointStorageReaderInterface
         $this->servicePointStorageMapper = $servicePointStorageMapper;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointStorageCriteriaTransfer $servicePointStorageCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServicePointStorageCollectionTransfer
-     */
     public function getServicePointStorageCollection(
         ServicePointStorageCriteriaTransfer $servicePointStorageCriteriaTransfer
     ): ServicePointStorageCollectionTransfer {
@@ -82,11 +71,6 @@ class ServicePointStorageReader implements ServicePointStorageReaderInterface
         return new ServicePointStorageCollectionTransfer();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointStorageConditionsTransfer $servicePointStorageConditionsTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServicePointStorageCollectionTransfer
-     */
     protected function getServicePointStorageCollectionByServicePointIds(
         ServicePointStorageConditionsTransfer $servicePointStorageConditionsTransfer
     ): ServicePointStorageCollectionTransfer {
@@ -123,11 +107,6 @@ class ServicePointStorageReader implements ServicePointStorageReaderInterface
         return $servicePointStorageCollectionTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointStorageConditionsTransfer $servicePointStorageConditionsTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServicePointStorageCollectionTransfer
-     */
     protected function getServicePointStorageCollectionByUuids(
         ServicePointStorageConditionsTransfer $servicePointStorageConditionsTransfer
     ): ServicePointStorageCollectionTransfer {

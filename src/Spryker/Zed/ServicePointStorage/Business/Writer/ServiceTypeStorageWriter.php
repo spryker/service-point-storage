@@ -38,12 +38,6 @@ class ServiceTypeStorageWriter implements ServiceTypeStorageWriterInterface
      */
     protected ServicePointStorageMapperInterface $servicePointStorageMapper;
 
-    /**
-     * @param \Spryker\Zed\ServicePointStorage\Dependency\Facade\ServicePointStorageToEventBehaviorFacadeInterface $eventBehaviorFacade
-     * @param \Spryker\Zed\ServicePointStorage\Dependency\Facade\ServicePointStorageToServicePointFacadeInterface $servicePointFacade
-     * @param \Spryker\Zed\ServicePointStorage\Persistence\ServicePointStorageEntityManagerInterface $servicePointStorageEntityManager
-     * @param \Spryker\Zed\ServicePointStorage\Business\Mapper\ServicePointStorageMapperInterface $servicePointStorageMapper
-     */
     public function __construct(
         ServicePointStorageToEventBehaviorFacadeInterface $eventBehaviorFacade,
         ServicePointStorageToServicePointFacadeInterface $servicePointFacade,

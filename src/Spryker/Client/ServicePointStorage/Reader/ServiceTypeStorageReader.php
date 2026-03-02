@@ -44,12 +44,6 @@ class ServiceTypeStorageReader implements ServiceTypeStorageReaderInterface
      */
     protected ServicePointStorageMapperInterface $servicePointStorageMapper;
 
-    /**
-     * @param \Spryker\Client\ServicePointStorage\Dependency\Client\ServicePointStorageToStorageClientInterface $storageClient
-     * @param \Spryker\Client\ServicePointStorage\Generator\StorageKeyGeneratorInterface $storageKeyGenerator
-     * @param \Spryker\Client\ServicePointStorage\Dependency\Service\ServicePointStorageToUtilEncodingServiceInterface $utilEncodingService
-     * @param \Spryker\Client\ServicePointStorage\Mapper\ServicePointStorageMapperInterface $servicePointStorageMapper
-     */
     public function __construct(
         ServicePointStorageToStorageClientInterface $storageClient,
         StorageKeyGeneratorInterface $storageKeyGenerator,
@@ -62,11 +56,6 @@ class ServiceTypeStorageReader implements ServiceTypeStorageReaderInterface
         $this->servicePointStorageMapper = $servicePointStorageMapper;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeStorageCriteriaTransfer $serviceTypeStorageCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServiceTypeStorageCollectionTransfer
-     */
     public function getServiceTypeStorageCollection(
         ServiceTypeStorageCriteriaTransfer $serviceTypeStorageCriteriaTransfer
     ): ServiceTypeStorageCollectionTransfer {
@@ -83,11 +72,6 @@ class ServiceTypeStorageReader implements ServiceTypeStorageReaderInterface
         return new ServiceTypeStorageCollectionTransfer();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeStorageConditionsTransfer $serviceTypeStorageConditionsTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServiceTypeStorageCollectionTransfer
-     */
     protected function getServiceTypeStorageCollectionByServiceTypeIds(
         ServiceTypeStorageConditionsTransfer $serviceTypeStorageConditionsTransfer
     ): ServiceTypeStorageCollectionTransfer {
@@ -120,11 +104,6 @@ class ServiceTypeStorageReader implements ServiceTypeStorageReaderInterface
         return $serviceTypeStorageCollectionTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeStorageConditionsTransfer $serviceTypeStorageConditionsTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServiceTypeStorageCollectionTransfer
-     */
     protected function getServiceTypeStorageCollectionByUuids(
         ServiceTypeStorageConditionsTransfer $serviceTypeStorageConditionsTransfer
     ): ServiceTypeStorageCollectionTransfer {

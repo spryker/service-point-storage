@@ -33,9 +33,6 @@ class GetServiceTypeStorageSynchronizationDataTransfersTest extends Unit
      */
     protected ServicePointStorageBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();

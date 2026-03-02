@@ -27,21 +27,11 @@ class ServicePointStorageToServicePointFacadeBridge implements ServicePointStora
         $this->servicePointFacade = $servicePointFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointCriteriaTransfer $servicePointCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServicePointCollectionTransfer
-     */
     public function getServicePointCollection(ServicePointCriteriaTransfer $servicePointCriteriaTransfer): ServicePointCollectionTransfer
     {
         return $this->servicePointFacade->getServicePointCollection($servicePointCriteriaTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeCriteriaTransfer $serviceTypeCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServiceTypeCollectionTransfer
-     */
     public function getServiceTypeCollection(
         ServiceTypeCriteriaTransfer $serviceTypeCriteriaTransfer
     ): ServiceTypeCollectionTransfer {

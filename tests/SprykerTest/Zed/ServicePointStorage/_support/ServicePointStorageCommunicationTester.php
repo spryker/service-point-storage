@@ -42,17 +42,11 @@ class ServicePointStorageCommunicationTester extends Actor
         return $this->haveServicePoint($servicePointTransfer->toArray());
     }
 
-    /**
-     * @return void
-     */
     public function ensureServiceTypeTableIsEmpty(): void
     {
         $this->ensureDatabaseTableIsEmpty($this->getServiceTypeQuery());
     }
 
-    /**
-     * @return \Orm\Zed\ServicePoint\Persistence\SpyServiceTypeQuery
-     */
     protected function getServiceTypeQuery(): SpyServiceTypeQuery
     {
         return SpyServiceTypeQuery::create();

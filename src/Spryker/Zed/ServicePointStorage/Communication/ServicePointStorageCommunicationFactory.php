@@ -19,9 +19,6 @@ use Spryker\Zed\ServicePointStorage\ServicePointStorageDependencyProvider;
  */
 class ServicePointStorageCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Spryker\Zed\ServicePointStorage\Dependency\Facade\ServicePointStorageToServicePointFacadeInterface
-     */
     public function getServicePointFacade(): ServicePointStorageToServicePointFacadeInterface
     {
         return $this->getProvidedDependency(ServicePointStorageDependencyProvider::FACADE_SERVICE_POINT);

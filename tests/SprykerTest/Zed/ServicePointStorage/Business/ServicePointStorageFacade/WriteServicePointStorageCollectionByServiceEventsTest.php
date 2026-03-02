@@ -70,9 +70,6 @@ class WriteServicePointStorageCollectionByServiceEventsTest extends Unit
      */
     protected ServicePointStorageBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function testShouldAddActiveServices(): void
     {
         // Arrange
@@ -112,9 +109,6 @@ class WriteServicePointStorageCollectionByServiceEventsTest extends Unit
         $this->assertSame($serviceTransfer->getServiceType()->getUuid(), $serviceData[static::KEY_SERVICE_TYPE][static::KEY_UUID]);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldRemoveNotActiveService(): void
     {
         // Arrange

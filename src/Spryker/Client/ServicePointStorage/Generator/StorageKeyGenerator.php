@@ -22,9 +22,6 @@ class StorageKeyGenerator implements StorageKeyGeneratorInterface
      */
     protected ServicePointStorageToSynchronizationServiceInterface $synchronizationService;
 
-    /**
-     * @param \Spryker\Client\ServicePointStorage\Dependency\Service\ServicePointStorageToSynchronizationServiceInterface $synchronizationService
-     */
     public function __construct(ServicePointStorageToSynchronizationServiceInterface $synchronizationService)
     {
         $this->synchronizationService = $synchronizationService;
@@ -71,13 +68,6 @@ class StorageKeyGenerator implements StorageKeyGeneratorInterface
         return $storageKeys;
     }
 
-    /**
-     * @param string $reference
-     * @param string $resourceName
-     * @param string|null $storeName
-     *
-     * @return string
-     */
     protected function generateKey(string $reference, string $resourceName, ?string $storeName): string
     {
         $synchronizationDataTransfer = (new SynchronizationDataTransfer())

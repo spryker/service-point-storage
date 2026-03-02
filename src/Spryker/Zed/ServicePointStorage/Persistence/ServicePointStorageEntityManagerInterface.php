@@ -12,12 +12,6 @@ use Generated\Shared\Transfer\ServiceTypeStorageTransfer;
 
 interface ServicePointStorageEntityManagerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointStorageTransfer $servicePointStorageTransfer
-     * @param string $storeName
-     *
-     * @return void
-     */
     public function saveServicePointStorageForStore(
         ServicePointStorageTransfer $servicePointStorageTransfer,
         string $storeName
@@ -31,11 +25,6 @@ interface ServicePointStorageEntityManagerInterface
      */
     public function deleteServicePointStorageByServicePointIds(array $servicePointIds, ?string $storeName = null): void;
 
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeStorageTransfer $serviceTypeStorageTransfer
-     *
-     * @return void
-     */
     public function saveServiceTypeStorage(ServiceTypeStorageTransfer $serviceTypeStorageTransfer): void;
 
     /**

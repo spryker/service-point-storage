@@ -56,9 +56,6 @@ class WriteServicePointStorageCollectionByServicePointEventsTest extends Unit
      */
     protected ServicePointStorageBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function testShouldNotWriteWhenServicePointIdIsNotProvided(): void
     {
         // Arrange
@@ -75,9 +72,6 @@ class WriteServicePointStorageCollectionByServicePointEventsTest extends Unit
         $this->assertCount(0, $servicePointStorageEntities);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldNotWriteWhenNotExistingServicePointIdIsProvided(): void
     {
         // Arrange
@@ -97,9 +91,6 @@ class WriteServicePointStorageCollectionByServicePointEventsTest extends Unit
         $this->assertCount(0, $servicePointStorageEntities);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldNotWriteNotActiveServicePoint(): void
     {
         // Arrange
@@ -117,9 +108,6 @@ class WriteServicePointStorageCollectionByServicePointEventsTest extends Unit
         $this->assertCount(0, $servicePointStorageEntities);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldWriteActiveServicePoint(): void
     {
         // Arrange
@@ -141,9 +129,6 @@ class WriteServicePointStorageCollectionByServicePointEventsTest extends Unit
         $this->assertSame($servicePointTransfer->getUuid(), $servicePointEntity->getData()[static::KEY_UUID]);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldDeleteServicePointWhenServicePointIsDeactivated(): void
     {
         // Arrange
@@ -170,9 +155,6 @@ class WriteServicePointStorageCollectionByServicePointEventsTest extends Unit
         $this->assertCount(0, $servicePointStorageEntities);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldUpdateServicePoint(): void
     {
         // Arrange

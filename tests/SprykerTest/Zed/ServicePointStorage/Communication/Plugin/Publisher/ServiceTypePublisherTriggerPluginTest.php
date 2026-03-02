@@ -30,9 +30,6 @@ class ServiceTypePublisherTriggerPluginTest extends Unit
      */
     protected ServicePointStorageCommunicationTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();

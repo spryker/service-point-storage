@@ -16,12 +16,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractEntityManager;
  */
 class ServicePointStorageEntityManager extends AbstractEntityManager implements ServicePointStorageEntityManagerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointStorageTransfer $servicePointStorageTransfer
-     * @param string $storeName
-     *
-     * @return void
-     */
     public function saveServicePointStorageForStore(
         ServicePointStorageTransfer $servicePointStorageTransfer,
         string $storeName
@@ -60,11 +54,6 @@ class ServicePointStorageEntityManager extends AbstractEntityManager implements 
         $servicePointCollection->delete();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeStorageTransfer $serviceTypeStorageTransfer
-     *
-     * @return void
-     */
     public function saveServiceTypeStorage(ServiceTypeStorageTransfer $serviceTypeStorageTransfer): void
     {
         $serviceTypeStorageEntity = $this->getFactory()
