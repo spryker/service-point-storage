@@ -28,6 +28,8 @@ suites:
                 - \SprykerTest\Zed\Country\Helper\CountryDataHelper
                 - \SprykerTest\Shared\Country\Helper\RegionHelper
                 - \SprykerTest\Shared\Testify\Helper\TableRelationsCleanupHelper
+                - \SprykerTest\Shared\Testify\Helper\ConfigHelper
+                - \SprykerTest\Shared\Storage\Helper\StorageRedisConfigHelper
 
     Communication:
         path: Communication
