@@ -7,9 +7,9 @@
 
 namespace Spryker\Shared\ServicePointStorage;
 
-use Spryker\Shared\Kernel\AbstractBundleConfig;
+use Spryker\Shared\Kernel\AbstractSharedConfig;
 
-class ServicePointStorageConfig extends AbstractBundleConfig
+class ServicePointStorageConfig extends AbstractSharedConfig
 {
     /**
      * Specification:
