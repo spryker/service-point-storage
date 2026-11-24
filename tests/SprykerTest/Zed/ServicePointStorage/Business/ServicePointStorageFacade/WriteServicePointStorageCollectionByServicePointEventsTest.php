@@ -129,6 +129,25 @@ class WriteServicePointStorageCollectionByServicePointEventsTest extends Unit
         $this->assertSame($servicePointTransfer->getUuid(), $servicePointEntity->getData()[static::KEY_UUID]);
     }
 
+    public function testShouldSynchronizeActiveServicePointToStorageWhenSynchronizationMessagesAreProcessed(): void
+    {
+        // Arrange
+        $servicePointTransfer = $this->tester->createServicePointTransferWithStoreRelations(
+            [ServicePointTransfer::IS_ACTIVE => true],
+            [static::STORE_NAME_DE],
+        );
+        $eventEntityTransfer = (new EventEntityTransfer())->setId($servicePointTransfer->getIdServicePoint());
+
+        // Act
+        $this->tester->getFacade()->writeServicePointStorageCollectionByServicePointEvents([$eventEntityTransfer]);
+        $this->tester->processSynchronizationMessages();
+
+        // Assert
+        $this->assertNotNull(
+            $this->tester->findServicePointStorageDataByUuid(static::STORE_NAME_DE, $servicePointTransfer->getUuidOrFail()),
+        );
+    }
+
     public function testShouldDeleteServicePointWhenServicePointIsDeactivated(): void
     {
         // Arrange

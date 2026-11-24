@@ -20,6 +20,9 @@ use Generated\Shared\Transfer\StoreTransfer;
 use Orm\Zed\ServicePoint\Persistence\SpyServiceTypeQuery;
 use Orm\Zed\ServicePointStorage\Persistence\SpyServicePointStorageQuery;
 use Orm\Zed\ServicePointStorage\Persistence\SpyServiceTypeStorageQuery;
+use Spryker\Client\Kernel\Locator as ClientLocator;
+use Spryker\Shared\ServicePointStorage\ServicePointStorageConfig;
+use Spryker\Zed\Kernel\Locator as ZedLocator;
 
 /**
  * Inherited Methods
@@ -102,6 +105,22 @@ class ServicePointStorageBusinessTester extends Actor
             $servicePointStorageEntity->setData($servicePointStorageTransfer->toArray());
             $servicePointStorageEntity->save();
         }
+    }
+
+    public function processSynchronizationMessages(): void
+    {
+        ZedLocator::getInstance()->synchronization()->facade()->flushSynchronizationMessagesFromBuffer();
+        ZedLocator::getInstance()->queue()->facade()->startTask(ServicePointStorageConfig::QUEUE_NAME_SYNC_STORAGE_SERVICE_POINT);
+    }
+
+    /**
+     * @return array<string, mixed>|null
+     */
+    public function findServicePointStorageDataByUuid(string $storeName, string $uuid): ?array
+    {
+        $storageKey = sprintf('service_point:%s:uuid:%s', strtolower($storeName), $uuid);
+
+        return ClientLocator::getInstance()->storage()->client()->get($storageKey);
     }
 
     public function saveServiceTypeStorage(ServiceTypeTransfer $serviceTypeTransfer): void
